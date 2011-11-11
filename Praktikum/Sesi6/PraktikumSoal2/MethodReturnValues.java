@@ -12,6 +12,6 @@ public class MethodReturnValues
 		static int myMethod()
 			{
 			System.out.println("This computer is lagging!");
-				return 4;
+				return 0;
 			}
 	}
