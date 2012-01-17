@@ -1,0 +1,50 @@
+package main;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import model.Employee;
+import model.Student;
+
+public class InheritanceMain {
+	public static void main(String[] args) throws ParseException{
+		Student s = new Student(); // menciptakan objek baru student dengan atribut spesifik
+		s.setNim("12101033");
+		s.setNama("galang rambu anarki");
+		s.setAlamat ("Jl. Taman Sari No. 5");
+	s.setTglLahir(new SimpleDateFormat("dd-MM-yyyy").parse ("21-03-1987"));
+		s.setNoHp("081122334455");
+		
+		Employee e = new Employee(); // menciptakan objek baru employee dengan atribut spesifik
+		e.setNip("21101189");
+		e.setNama("Adi");
+		e.setAlamat("Jl. Jayakarta No.6");
+	e.setTglLahir(new SimpleDateFormat("dd-MM-yyyy").parse ("13-06-1987"));
+		e.setNoHp("085210831766");
+		
+		showData (s);
+		System.out.println
+		("\n===================================\n");
+		showData(e);
+	}
+	
+	// menampilkan data berdasarkan informasi atau nilai variable yang telah dikirim dan diproses pada class dalam package model
+	static void showData (Student s){
+		System.out.println("Class Student");
+		System.out.println("Nim : " + s.getNim());
+		System.out.println("Nama : " + s.getNama());
+		System.out.println("Alamat : " + s.getAlamat());
+		System.out.println("Tgl Lahir : " + new 
+		SimpleDateFormat("dd MMMMM yyyy").format(s.getTglLahir()));
+		System.out.println("No Hp : " + s.getNoHp());
+	}
+	
+	static void showData (Employee e){
+		System.out.println("Class Employee");
+		System.out.println("NIP : " + e.getNip());
+		System.out.println("Nama : " + e.getNama());
+		System.out.println("Alamat: " + e.getAlamat());
+		System.out.println("Tgl Lahir : " + new 
+		SimpleDateFormat("dd MMMMM yyyy").format(e.getTglLahir()));
+		System.out.println("No HP: " + e.getNoHp());
+	}
+}
